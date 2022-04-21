@@ -1,8 +1,9 @@
-const { TestWatcher } = require("jest")
+const { TestWatcher } = require("jest");
+const MissionComander = require("../app/missionComander");
 
 describe("Esto es una suite de pruebas", () => {
-    TestWatcher('Caso prueba1', () => {
-        const result = 1 + 2 
-        expect(result).toBe(10);
+    test('1) Create mission commander object', () => {
+        const myMissionCommander = new MissionComander("Woopa") 
+        expect(myMissionCommander.name).toBe("Woopa");
     })
 })
